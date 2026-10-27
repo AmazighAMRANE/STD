@@ -31,14 +31,14 @@ class File:
         # Je retourne l'élément qui sort
         return ...
 
-	def printPile(self):
+    def printPile(self):
 
-		print("Sommet")
+        print("Sommet")
 
-		for i in range(self.taille):
-			print("|", self.P[i], "|")
+        for i in range(self.taille):
+            print("|", self.P[i], "|")
 
-		print("-----")
+        print("-----")
 
 if __name__ == "__main__":
 
