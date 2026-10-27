@@ -1,3 +1,18 @@
+def afficher3Piles(A, B, C):
+    print("-" * 28)
+    print("   A        B        C")
+    print("-" * 28)
+    h = max(A.taille, B.taille, C.taille)
+
+    for i in range(h):
+        a = A.P[i] if i < A.taille else ""
+        b = B.P[i] if i < B.taille else ""
+        c = C.P[i] if i < C.taille else ""
+
+        print(f"{str(a):^8} {str(b):^8} {str(c):^8}")
+
+    print("-" * 28)
+
 class Pile:
 
     def __init__(self):
@@ -34,12 +49,6 @@ class Pile:
 
         # Je renvoie le sommet de la pile
         return ...
-	
-    def printPile(self):
-        print("Sommet")
-        for i in range(self.taille):
-            print("|", self.P[i], "|")
-        print("-----")
 
 if __name__ == "__main__":
 
@@ -54,9 +63,7 @@ if __name__ == "__main__":
     A.empiler(3)
 
     print("État initial")
-    A.printPile()
-    B.printPile()
-    C.printPile()
+    afficher3Piles(A,B,C)
 
 
     # Déplacements
@@ -66,9 +73,7 @@ if __name__ == "__main__":
     C.empiler(A.depiler())   
 	
     print("État intermédiaire")
-    A.printPile()
-    B.printPile()
-    C.printPile()
+    afficher3Piles(A,B,C)
 
     A.empiler(B.depiler())   
     A.empiler(C.depiler())   
@@ -76,7 +81,5 @@ if __name__ == "__main__":
     A.empiler(C.depiler())   
     
     print("État final")
-    A.printPile()
-    B.printPile()
-    C.printPile()
+    afficher3Piles(A,B,C)
 
