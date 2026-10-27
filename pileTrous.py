@@ -36,12 +36,9 @@ class Pile:
         return ...
 	
 	def printPile(self):
-
 		print("Sommet")
-
 		for i in range(self.taille):
 			print("|", self.P[i], "|")
-
 		print("-----")
 
 if __name__ == "__main__":
@@ -57,9 +54,9 @@ if __name__ == "__main__":
     A.empiler(3)
 
     print("État initial")
-    printPile(A)
-    printPile(B)
-    printPile(C)
+	A.printPile()
+	B.printPile()
+	C.printPile()
 
 
     # Déplacements
@@ -69,9 +66,9 @@ if __name__ == "__main__":
     C.empiler(A.depiler())   
 	
 	print("État intermédiaire")
-    printPile(A)
-    printPile(B)
-    printPile(C)
+	A.printPile()
+	B.printPile()
+	C.printPile()
 
     A.empiler(B.depiler())   
     A.empiler(C.depiler())   
@@ -79,7 +76,7 @@ if __name__ == "__main__":
     A.empiler(C.depiler())   
     
     print("État final")
-    printPile(A)
-    printPile(B)
-    printPile(C)
+	A.printPile()
+	B.printPile()
+	C.printPile()
 
