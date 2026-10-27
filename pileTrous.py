@@ -72,7 +72,7 @@ if __name__ == "__main__":
     C.empiler(A.depiler())   
     C.empiler(A.depiler())   
 	
-    print("État intermédiaire")
+    print("\nÉtat intermédiaire")
     afficher3Piles(A,B,C)
 
     A.empiler(B.depiler())   
@@ -80,6 +80,6 @@ if __name__ == "__main__":
     A.empiler(B.depiler())   
     A.empiler(C.depiler())   
     
-    print("État final")
+    print("\nÉtat final")
     afficher3Piles(A,B,C)
 
